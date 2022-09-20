@@ -1,0 +1,23 @@
+{% extends 'basepage.html' %}
+
+{% block content %}
+
+<div class="contact">
+    <form action="sendmail" method="post">
+        {% csrf_token %}
+        <h3>Contacter nous</h3><br>
+        <h1 style="color: rgb(2, 124, 2);">{{response}}</h1>
+        <br>
+        <input size="35" id="nom_entreprise" name="nom_entreprise" type="text" placeholder="Nom entreprise" class="box"><br><br>
+        <input size="35" id="pays" name="pays"type="text" placeholder="Pays" class="box"><br><br>
+        <input size="35" id="nom" name="nom" type="text" placeholder="Nom" class="box"><br><br>
+        <input size="35" id="prenom" name="prenom" type="text" placeholder="Prenom" class="box"><br><br>
+        <input size="35" id="email" name="email" type="email" placeholder="Email" class="box"><br><br>
+        <input size="35" id="telephone" name="telephone" type="tel" placeholder="Telephone" class="box"><br><br>
+        <textarea id="message" name="message" placeholder="Message" cols="36" rows="10"></textarea><br>
+        <input  class="btn-ca" type="submit" name="submit"  id="submit" value="Soumettre">
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'Basepage.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <td>
+            <div class="imagm">
+                {% load static %}
+                <img src="{% static '/img/outputMap.png' %}">
+            </div>
+        </td>
+        <td>
+            <div
+                style="color:black; margin-left: 2cm; margin-right: 0.5cm; background-color:rgba(162, 202, 230, 0.651); padding: 20px; border: 5px solid #68c1eb;">
+                <form action="fetch" method="post">
+                    {% csrf_token %}
+                    <label style="color: black;">{{validity}}</label><br><br><br>
+                    <label>Identfiant vehicule:</label>
+                    <input type="text" name="id_vehicule" id="id_vehicule"><br><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Date debut: &nbsp;&nbsp;</label>
+                            </td>
+                            <td>
+                                <input type="datetime-local" name="date_heure_A" id="date_heure_A">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Date fin:</label>
+                            </td>
+                            <td>
+                                <input type="datetime-local" name="date_heure_B" id="date_heure_B">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input style="padding: 6px; border-radius:50px;" type="submit" name="submit" id="submit"
+                                    value="Soumettre">
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="color: black ; margin-left: 20px;">
+                        <label>{{ch}}&nbsp;&nbsp;</label>{{name}}<br>
+                        <label>{{mat}}&nbsp;&nbsp;</label>{{matricule}}<br>
+                        <label>{{cl}}&nbsp;&nbsp;</label>{{classe}}<br>
+                        <label>{{vm}}&nbsp;&nbsp; </label>{{vitesse_moyenne}}<br>
+                    </div>
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>
+{% endblock %}

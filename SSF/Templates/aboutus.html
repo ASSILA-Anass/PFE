@@ -1,0 +1,43 @@
+{% extends 'Basepage.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div  class="info1">
+        <h1 style="margin-bottom: 50px; font-size: 130%;">Manuelle:</h1>
+        <div class="infssf">
+        <h3 style="font-size: 130%;">Pour utiliser SSF on offre trois fonctionalites:</h3>
+        <p style="margin-left: 80px;font-size: 130%;"> -Lors de la saisie de l'identifiant d'un vehicule on vous donne le dernier endroit où se trouvait un véhicule</p>
+        <p style="margin-left: 80px;font-size: 130%;">-Lorsque vous saisissez l'identifiant d'un vehicule et date debut , on vous donne le lieu où se trouvait le véhicule à la cette date</p>
+        <p style="margin-left: 80px;font-size: 130%; margin-bottom: 50px;">-Lorsque vous entrez l'identifiant, date debut et date fin , cela vous donne un itinéraire de véhicule entre la première et la deuxième date et son vitesse moyenne pendant le trajet</p>
+        </div>
+        <h1 style="font-size: 130%;">À Propos:</h1>
+        <p style="font-size: 130%;">
+            Développé lors du PFF à ISTA NTIC Safi par ASSILA Anass et ELHAFFAR Toufiq utilisant la technologie GPS, SSF est une application web qui aide 
+            les entreprises à mieux gérer leurs véhicules et à garder une trace en tout temps.
+            SSF est moins précise lorsqu'elle est utilisée très loin de l'équateur (plus de 35 degree),
+            cependant, nous travaillons à élargir le périmètre de service pour inclure la terre entière.</p>
+    </div>
+    <div class="view" >
+        <div style="border: 3px solid #68c1eb; font-size: 120%;">
+            <img  src="{% static '/img/picture_1.jpg' %}" alt="">
+            <ul>
+                <li>ASSILA Anass</li>
+                <li>Etudiant de ISTA NTIC</li>
+                <li>anass.assila.7@gmail.com</li>
+            </ul>
+        </div>
+        <div style="border: 3px solid #68c1eb; font-size: 120%; " >
+            <img 
+                src="{% static '/img/picture_2.jpg' %}" alt="">
+            <ul >
+                <li>ELHAFFAR Toufiq</li>
+                <li>Etudiant de ISTA NTIC</li>
+                <li>toufiqhaffar66@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+</div>

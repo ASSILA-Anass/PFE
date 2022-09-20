@@ -1,0 +1,14 @@
+{% extends 'Basepage.html' %}
+
+{% block content %}
+
+<div class="hompage">
+    <form action="login" method="post">
+        {% csrf_token %}
+        <h3>Identification</h3><br><br>
+        <input size="35" type="text" name="username" id="username" placeholder="nom utilisateur" class="box"><br><br>
+        <input size="35"  type="password" name="password" id="password"placeholder="mot de passe" class="box"><br>
+        <input class="btnp" type="submit"  name="submit" id="submit" value="Se Connecter">
+    </form>
+</div>
+{% endblock %}
