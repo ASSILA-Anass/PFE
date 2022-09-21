@@ -15,7 +15,7 @@ import urllib.request
 validity_dic={"validity":"pas d'informations correspondantes dans la base de données"}
 APIkey="mHcaHwUF3uxP9mtu8CP37qD7AYhodI0M"
 GPSkey="zBivviezIVzbGIbiBIbi4uizIGBZyhAO"
-# Create your models here.
+# Create your models here
 '''***********************************$ les classes pour base de données $***********************************'''
 
 class utilisateurs(models.Model):
